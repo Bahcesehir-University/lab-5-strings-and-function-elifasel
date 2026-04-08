@@ -116,7 +116,7 @@ MyString MyString::substring(int start, int len) const {
     // Throw std::out_of_range if start is invalid (negative or >= length)
     // Hint: Use std::string::substr()
     
-     if (start < 0 || start >= len){
+     if (start < 0 || start >= data.length()){
         throw invalid_argument("out of range");
     }
     return MyString(data.substr(start ,len));
@@ -388,5 +388,4 @@ int main() {
     cout << "\nAll demos complete!" << endl;
     return 0;
 }
-    
  
